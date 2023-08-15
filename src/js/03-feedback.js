@@ -39,6 +39,7 @@ function dataEntry() {
     localStorage.setItem(
         'feedback-form-state',
         JSON.stringify({
+
             email: form.email.value,
             message: form.message.value,
         })
@@ -64,4 +65,6 @@ function handleSubmit(event) {
     console.log(dataStorage);
 
     form.reset();
+
+    localStorage.removeItem('feedback-form-state');
 }
